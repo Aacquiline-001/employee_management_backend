@@ -40,10 +40,7 @@ router.put('/:employeeId',async(req,res)=>{
         if(!updatedEmployee){
             return res.status(404).json({error:'Employee not found'});
         }
-        else{
-            return res.status(200).json('Employee updated successfully');
-        }
-        res.json(updatedEmployee);
+        return res.status(200).json('Employee updated successfully');
     }catch(err){
         res.status(500).json({error:err.message});
     }
